@@ -13,7 +13,6 @@ git clone https://github.com/nuxt/docs
 
 The markdown files are store at [https://github.com/nuxt/docs](https://github.com/nuxt/docs), this is why we clone it inside the nuxtjs.org directory.
 
-
 Update your `/etc/hosts` to have the following lines:
 
 ```
