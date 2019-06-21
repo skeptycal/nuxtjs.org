@@ -1,5 +1,4 @@
-.more-vertical.icon
-{
+.more-vertical.icon {
   color: #000;
   margin-left: 9px;
   margin-top: 9px;
@@ -7,20 +6,18 @@
   height: 1px;
   border-radius: 50%;
   border: solid 1px currentColor;
-  &:before, &:after
-  {
+  &:before,
+  &:after {
     left: -1px;
     width: 1px;
     height: 1px;
     border-radius: 50%;
     border: solid 1px currentColor;
   }
-  &:before
-  {
+  &:before {
     top: -7px;
   }
-  &:after
-  {
+  &:after {
     top: 5px;
   }
 }

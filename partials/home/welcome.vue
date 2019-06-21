@@ -3,22 +3,49 @@
     <div class="container">
       <div class="row">
         <div class="nWelcome_Content">
-          <h1 class="nWelcome_Content_Title" v-html="$store.state.homepage.welcome.attrs.title"></h1>
+          <h1
+            class="nWelcome_Content_Title"
+            v-html="$store.state.homepage.welcome.attrs.title"
+          ></h1>
           <h4 class="nWelcome_Content_Subtitle">
-            {{ $store.state.lang.homepage.welcome.app_types_prefix }}<transition name="fade" mode="out-in"><span class="nWelcome_Content_Subtitle_Type" v-for="(appType, index) of appTypes" :key="appType" v-if="index === current">{{ appType }}</span></transition>{{ $store.state.lang.homepage.welcome.app_types_suffix }}
+            {{ $store.state.lang.homepage.welcome.app_types_prefix
+            }}<transition name="fade" mode="out-in"
+              ><span
+                class="nWelcome_Content_Subtitle_Type"
+                v-for="(appType, index) of appTypes"
+                :key="appType"
+                v-if="index === current"
+                >{{ appType }}</span
+              ></transition
+            >{{ $store.state.lang.homepage.welcome.app_types_suffix }}
           </h4>
-          <p class="nWelcome_Content_Description" v-html="$store.state.homepage.welcome.body"></p>
+          <p
+            class="nWelcome_Content_Description"
+            v-html="$store.state.homepage.welcome.body"
+          ></p>
           <div class="nWelcome_Content_Links">
-            <nuxt-link class="nWelcome_Content_Links_Button nWelcome_Content_Links_Button--green" to="/guide/installation">
+            <nuxt-link
+              class="nWelcome_Content_Links_Button nWelcome_Content_Links_Button--green"
+              to="/guide/installation"
+            >
               {{ $store.state.lang.links.get_started }}
             </nuxt-link>
-            <a class="nWelcome_Content_Links_Button" href="https://github.com/nuxt/nuxt.js" target="_blank" rel="noopener">
-              {{ $store.state.lang.links.github }} <span class="version">{{ $store.state.ghVersion }}</span>
+            <a
+              class="nWelcome_Content_Links_Button"
+              href="https://github.com/nuxt/nuxt.js"
+              target="_blank"
+              rel="noopener"
+            >
+              {{ $store.state.lang.links.github }}
+              <span class="version">{{ $store.state.ghVersion }}</span>
             </a>
           </div>
         </div>
         <figure class="nWelcome_Figure">
-          <responsive-video src="https://player.vimeo.com/video/311756540" style="margin: 0;"/>
+          <responsive-video
+            src="https://player.vimeo.com/video/311756540"
+            style="margin: 0;"
+          />
           <p v-html="$store.state.homepage.welcome_figure.body"></p>
         </figure>
       </div>
@@ -27,27 +54,27 @@
 </template>
 
 <script>
-import ResponsiveVideo from '~/components/ResponsiveVideo.vue'
+import ResponsiveVideo from "~/components/ResponsiveVideo.vue";
 
 export default {
   data() {
     return {
       appTypes: this.$store.state.lang.homepage.welcome.app_types,
       current: 0
-    }
+    };
   },
   mounted() {
     this._timer = setInterval(() => {
-      this.current = (this.current + 1) % this.appTypes.length
-    }, 2500)
+      this.current = (this.current + 1) % this.appTypes.length;
+    }, 2500);
   },
   destroyed() {
-    clearInterval(this._timer)
+    clearInterval(this._timer);
   },
   components: {
     ResponsiveVideo
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>
@@ -142,17 +169,18 @@ export default {
     }
   }
 }
-.fade-enter-active, .fade-leave-active {
-  transition: all .5s;
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 0.5s;
 }
 .fade-enter,
 .fade-leave-to {
   opacity: 0;
 }
 .fade-enter {
-  transform: translateX(-5px)
+  transform: translateX(-5px);
 }
 .fade-leave-to {
-  transform: translateX(5px)
+  transform: translateX(5px);
 }
 </style>

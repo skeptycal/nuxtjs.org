@@ -2,7 +2,12 @@
 //
 // By default, `<h1>`-`<h6>` all receive top and bottom margins. We nuke the top
 // margin for easier control within type scales as it avoids margin collapsing.
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin-top: 0;
   font-weight: $font-weight-semibold;
   color: $color-text-primary;
@@ -39,4 +44,3 @@ h6 {
   font-size: $h6-font-size;
   margin-bottom: $font-size-xs;
 }
-

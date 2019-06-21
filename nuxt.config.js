@@ -4,12 +4,24 @@ export default {
   modern: "client",
   head: {
     meta: [
-      { charset: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" }
+      {
+        charset: "utf-8"
+      },
+      {
+        name: "viewport",
+        content: "width=device-width, initial-scale=1"
+      }
     ],
     link: [
-      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
-      { rel: "preconnect", href: "https://www.google-analytics.com" }
+      {
+        rel: "icon",
+        type: "image/x-icon",
+        href: "/favicon.ico"
+      },
+      {
+        rel: "preconnect",
+        href: "https://www.google-analytics.com"
+      }
     ]
   },
   styleResources: {
@@ -21,7 +33,12 @@ export default {
     "~/assets/scss/main.scss"
   ],
   modules: [
-    ["~/modules/docs/", { port: 3001 }],
+    [
+      "~/modules/docs/",
+      {
+        port: 3001
+      }
+    ],
     "~/modules/crawler/",
     "~/modules/static/",
     // https://github.com/nuxt-community/style-resources-module
@@ -46,14 +63,19 @@ export default {
     docSearchApiKey: "ff80fbf046ce827f64f06e16f82f1401",
     locale
   },
-  loading: { color: "#41B883" },
+  loading: {
+    color: "#41B883"
+  },
   router: {
     scrollBehavior(to, from, savedPosition) {
       // savedPosition is only available for popstate navigations (back button)
       if (savedPosition) {
         return savedPosition;
       }
-      return { x: 0, y: 0 };
+      return {
+        x: 0,
+        y: 0
+      };
     }
   },
   build: {

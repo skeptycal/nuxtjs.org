@@ -89,7 +89,7 @@
     font-weight: 400;
     font-size: 13px;
     line-height: inherit;
-    font-family: 'Andale Mono', monospace;
+    font-family: "Andale Mono", monospace;
     background-color: rgba(200, 200, 200, 0.2);
   }
   pre {
@@ -201,8 +201,7 @@
     > * {
       color: #fff;
     }
-    a
-    {
+    a {
       color: #eee;
       text-decoration: underline;
       &:hover {

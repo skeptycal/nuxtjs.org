@@ -1,25 +1,39 @@
 <template>
   <section class="nWhy">
     <div class="container">
-      <h2 class="nWhy_Title"><span>{{ $store.state.homepage.why.attrs.title }}</span></h2>
+      <h2 class="nWhy_Title">
+        <span>{{ $store.state.homepage.why.attrs.title }}</span>
+      </h2>
       <div class="row">
         <div class="nWhy_Block">
-          <i-performant/>
-          <h4 class="nWhy_Block_Title">{{ $store.state.homepage.why_performant.attrs.title }}</h4>
-          <p class="nWhy_Block_Description" v-html="$store.state.homepage.why_performant.body">
-          </p>
+          <i-performant />
+          <h4 class="nWhy_Block_Title">
+            {{ $store.state.homepage.why_performant.attrs.title }}
+          </h4>
+          <p
+            class="nWhy_Block_Description"
+            v-html="$store.state.homepage.why_performant.body"
+          ></p>
         </div>
         <div class="nWhy_Block">
-          <i-modular/>
-          <h4 class="nWhy_Block_Title">{{ $store.state.homepage.why_modular.attrs.title }}</h4>
-          <p class="nWhy_Block_Description" v-html="$store.state.homepage.why_modular.body">
-          </p>
+          <i-modular />
+          <h4 class="nWhy_Block_Title">
+            {{ $store.state.homepage.why_modular.attrs.title }}
+          </h4>
+          <p
+            class="nWhy_Block_Description"
+            v-html="$store.state.homepage.why_modular.body"
+          ></p>
         </div>
         <div class="nWhy_Block">
-          <i-enjoyable/>
-          <h4 class="nWhy_Block_Title">{{ $store.state.homepage.why_enjoyable.attrs.title }}</h4>
-          <p class="nWhy_Block_Description" v-html="$store.state.homepage.why_enjoyable.body">
-          </p>
+          <i-enjoyable />
+          <h4 class="nWhy_Block_Title">
+            {{ $store.state.homepage.why_enjoyable.attrs.title }}
+          </h4>
+          <p
+            class="nWhy_Block_Description"
+            v-html="$store.state.homepage.why_enjoyable.body"
+          ></p>
         </div>
       </div>
     </div>
@@ -27,9 +41,9 @@
 </template>
 
 <script>
-import iPerformant from '@/components/icons/performant'
-import iModular from '@/components/icons/modular'
-import iEnjoyable from '@/components/icons/enjoyable'
+import iPerformant from "@/components/icons/performant";
+import iModular from "@/components/icons/modular";
+import iEnjoyable from "@/components/icons/enjoyable";
 
 export default {
   components: {
@@ -37,7 +51,7 @@ export default {
     iModular,
     iEnjoyable
   }
-}
+};
 </script>
 
 <style lang="scss">
@@ -70,7 +84,9 @@ export default {
       width: 30%;
       padding: 0;
     }
-    .iPerformant, .iModular, .iEnjoyable {
+    .iPerformant,
+    .iModular,
+    .iEnjoyable {
       height: 100px;
       display: inline-block;
       margin-bottom: 15px;

@@ -1,10 +1,19 @@
 <template>
   <section class="nCodesandbox">
     <div class="container">
-      <h2 class="nCodesandbox_Title"><span>{{ $store.state.lang.homepage.codesandbox_title }}</span></h2>
-      <code-sandbox src="https://codesandbox.io/s/github/nuxt/codesandbox-nuxt/tree/master/?autoresize=1&hidenavigation=1&view=preview" />
+      <h2 class="nCodesandbox_Title">
+        <span>{{ $store.state.lang.homepage.codesandbox_title }}</span>
+      </h2>
+      <code-sandbox
+        src="https://codesandbox.io/s/github/nuxt/codesandbox-nuxt/tree/master/?autoresize=1&hidenavigation=1&view=preview"
+      />
       <div class="nCodesandbox_Content">
-        <a class="nCodesandbox_Content_Button nCodesandbox_Content_Button--green" href="https://codesandbox.io/s/github/nuxt/codesandbox-nuxt/tree/master/?autoresize=1&hidenavigation=1&view=preview" target="_blank" rel="noopener">
+        <a
+          class="nCodesandbox_Content_Button nCodesandbox_Content_Button--green"
+          href="https://codesandbox.io/s/github/nuxt/codesandbox-nuxt/tree/master/?autoresize=1&hidenavigation=1&view=preview"
+          target="_blank"
+          rel="noopener"
+        >
           {{ $store.state.lang.homepage.codesandbox_open }}
         </a>
         <nuxt-link class="nCodesandbox_Content_Button" to="/examples">
@@ -16,13 +25,13 @@
 </template>
 
 <script>
-import CodeSandbox from '~/components/CodeSandbox.vue'
+import CodeSandbox from "~/components/CodeSandbox.vue";
 
 export default {
   components: {
     CodeSandbox
   }
-}
+};
 </script>
 
 <style lang="scss">
@@ -93,7 +102,7 @@ export default {
     }
   }
   &_Link {
-    border: 1px solid #41B883;
+    border: 1px solid #41b883;
     padding: 10px 20px;
     font-size: 20px;
     position: relative;
@@ -103,7 +112,7 @@ export default {
     display: inline-flex;
     align-self: center;
     &:hover {
-      background: #41B883;
+      background: #41b883;
       color: #141618;
       .fill {
         fill: #141618;

@@ -1,5 +1,4 @@
-.edit.icon
-{
+.edit.icon {
   color: #000;
   margin-left: 4px;
   margin-top: 7px;
@@ -9,9 +8,8 @@
   border: solid 1px currentColor;
   background-color: currentColor;
   -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-  &:before
-  {
+  transform: rotate(-45deg);
+  &:before {
     left: -12px;
     top: -1px;
     width: 0px;

@@ -4,69 +4,150 @@
     <div class="logos">
       <figure class="transparent">
         <img src="/logos/nuxt.svg" alt="nuxt-logo" />
-        <figcaption><a href="/logos/nuxt.svg" target="_blank" rel="noopener">nuxt.svg</a> / <a href="/logos/nuxt-square.svg" target="_blank" rel="noopener">nuxt-square.svg</a></figcaption>
+        <figcaption>
+          <a href="/logos/nuxt.svg" target="_blank" rel="noopener">nuxt.svg</a>
+          /
+          <a href="/logos/nuxt-square.svg" target="_blank" rel="noopener"
+            >nuxt-square.svg</a
+          >
+        </figcaption>
       </figure>
       <div>
         <figure class="transparent">
           <img src="/logos/nuxtjs-typo.svg" alt="nuxt-logo" />
-          <figcaption><a href="/logos/nuxtjs-typo.svg" target="_blank" rel="noopener">nuxtjs-typo.svg</a></figcaption>
+          <figcaption>
+            <a href="/logos/nuxtjs-typo.svg" target="_blank" rel="noopener"
+              >nuxtjs-typo.svg</a
+            >
+          </figcaption>
         </figure>
         <figure style="margin-top: 20px;">
           <img src="/logos/built-with-nuxt.svg" alt="built-with-nuxt-logo" />
-          <figcaption><a href="/logos/built-with-nuxt.svg" target="_blank" rel="noopener">built-with-nuxt.svg</a></figcaption>
+          <figcaption>
+            <a href="/logos/built-with-nuxt.svg" target="_blank" rel="noopener"
+              >built-with-nuxt.svg</a
+            >
+          </figcaption>
         </figure>
       </div>
       <figure>
-        <img src="/logos/nuxt-icon.png" srcset="/logos/nuxt-icon@2x.png 2x" alt="nuxt-logo" />
-        <figcaption><a href="/logos/nuxt-icon.png" target="_blank" rel="noopener">nuxt-icon.png</a></figcaption>
+        <img
+          src="/logos/nuxt-icon.png"
+          srcset="/logos/nuxt-icon@2x.png 2x"
+          alt="nuxt-logo"
+        />
+        <figcaption>
+          <a href="/logos/nuxt-icon.png" target="_blank" rel="noopener"
+            >nuxt-icon.png</a
+          >
+        </figcaption>
         <span class="dimensions">512 x 512</span>
       </figure>
       <figure>
-        <img src="/logos/nuxt-emoji.png" srcset="/logos/nuxt-emoji@2x.png 2x" alt="nuxt-logo" />
-        <figcaption><a href="/logos/nuxt-emoji.png" target="_blank" rel="noopener">nuxt-emoji.png</a></figcaption>
+        <img
+          src="/logos/nuxt-emoji.png"
+          srcset="/logos/nuxt-emoji@2x.png 2x"
+          alt="nuxt-logo"
+        />
+        <figcaption>
+          <a href="/logos/nuxt-emoji.png" target="_blank" rel="noopener"
+            >nuxt-emoji.png</a
+          >
+        </figcaption>
         <span class="dimensions">128 x 128</span>
       </figure>
       <figure class="dark">
         <img src="/logos/nuxt-white.svg" alt="nuxt-logo" />
-        <figcaption><a href="/logos/nuxt-white.svg" target="_blank" rel="noopener">nuxt-white.svg</a> / <a href="/logos/nuxt-square-white.svg" target="_blank" rel="noopener">nuxt-square-white.svg</a></figcaption>
+        <figcaption>
+          <a href="/logos/nuxt-white.svg" target="_blank" rel="noopener"
+            >nuxt-white.svg</a
+          >
+          /
+          <a href="/logos/nuxt-square-white.svg" target="_blank" rel="noopener"
+            >nuxt-square-white.svg</a
+          >
+        </figcaption>
       </figure>
       <div>
         <figure class="dark">
           <img src="/logos/nuxtjs-typo-white.svg" alt="nuxt-logo" />
-          <figcaption><a href="/logos/nuxtjs-typo-white.svg" target="_blank" rel="noopener">nuxtjs-typo-white.svg</a></figcaption>
+          <figcaption>
+            <a
+              href="/logos/nuxtjs-typo-white.svg"
+              target="_blank"
+              rel="noopener"
+              >nuxtjs-typo-white.svg</a
+            >
+          </figcaption>
         </figure>
         <figure class="dark" style="margin-top: 20px;">
-          <img src="/logos/built-with-nuxt-white.svg" alt="built-with-nuxt-logo" />
-          <figcaption><a href="/logos/built-with-nuxt-white.svg" target="_blank" rel="noopener">built-with-nuxt-white.svg</a></figcaption>
+          <img
+            src="/logos/built-with-nuxt-white.svg"
+            alt="built-with-nuxt-logo"
+          />
+          <figcaption>
+            <a
+              href="/logos/built-with-nuxt-white.svg"
+              target="_blank"
+              rel="noopener"
+              >built-with-nuxt-white.svg</a
+            >
+          </figcaption>
         </figure>
       </div>
       <figure class="dark">
-        <img src="/logos/nuxt-icon-white.png" srcset="/logos/nuxt-icon-white@2x.png 2x" alt="nuxt-logo" />
-        <figcaption><a href="/logos/nuxt-icon-white.png" target="_blank" rel="noopener">nuxt-icon-white.png</a></figcaption>
+        <img
+          src="/logos/nuxt-icon-white.png"
+          srcset="/logos/nuxt-icon-white@2x.png 2x"
+          alt="nuxt-logo"
+        />
+        <figcaption>
+          <a href="/logos/nuxt-icon-white.png" target="_blank" rel="noopener"
+            >nuxt-icon-white.png</a
+          >
+        </figcaption>
         <span class="dimensions">512 x 512</span>
       </figure>
       <figure class="dark">
-        <img src="/logos/nuxt-emoji-white.png" srcset="/logos/nuxt-emoji-white@2x.png 2x" alt="nuxt-logo" />
-        <figcaption><a href="/logos/nuxt-emoji-white.png" target="_blank" rel="noopener">nuxt-emoji-white.png</a></figcaption>
+        <img
+          src="/logos/nuxt-emoji-white.png"
+          srcset="/logos/nuxt-emoji-white@2x.png 2x"
+          alt="nuxt-logo"
+        />
+        <figcaption>
+          <a href="/logos/nuxt-emoji-white.png" target="_blank" rel="noopener"
+            >nuxt-emoji-white.png</a
+          >
+        </figcaption>
         <span class="dimensions">128 x 128</span>
       </figure>
     </div>
-    <p class="info">You can also download our <a href="/favicon.ico" target="_blank" rel="noopener">favicon</a> or our  <a href="/logos/nuxt-logos.sketch" target="_blank" rel="noopener">Sketch file</a>.</p>
+    <p class="info">
+      You can also download our
+      <a href="/favicon.ico" target="_blank" rel="noopener">favicon</a> or our
+      <a href="/logos/nuxt-logos.sketch" target="_blank" rel="noopener"
+        >Sketch file</a
+      >.
+    </p>
   </div>
 </template>
 
 <script>
 export default {
-  transition: 'logos',
+  transition: "logos",
   head: {
-    title: 'Logos',
-    titleTemplate: '%s - Nuxt.js',
+    title: "Logos",
+    titleTemplate: "%s - Nuxt.js",
     meta: [
-      { hid: 'description', name: 'description', content: 'Download Nuxt.js logos (SVG, icons, emoji and favicon).' },
-      { name: 'og:image', content: 'https://nuxtjs.org/meta_640.png' },
+      {
+        hid: "description",
+        name: "description",
+        content: "Download Nuxt.js logos (SVG, icons, emoji and favicon)."
+      },
+      { name: "og:image", content: "https://nuxtjs.org/meta_640.png" }
     ]
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>
@@ -125,16 +206,16 @@ figure {
   position: relative;
   margin: 0;
   padding: 20px;
-  box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
   max-width: 300px;
   overflow: hidden;
   box-sizing: border-box;
   text-align: center;
   display: table;
   &.dark {
-    background-color: #2F495E;
+    background-color: #2f495e;
     &:hover {
-      background-color: #233A4D;
+      background-color: #233a4d;
     }
   }
   &:hover {

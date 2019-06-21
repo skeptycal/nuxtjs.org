@@ -5,8 +5,17 @@
         <div class="nFooter_Group">
           <h4 class="nFooter_Group_Title">Translations</h4>
           <ul class="nFooter_Group_Content">
-            <li class="nFooter_Group_Content_Line" v-for="(t, i) in translations" :key="i">
-              <a class="nFooter_Group_Content_Line_Link" :href="t.path" target="_blank" rel="noopener">
+            <li
+              class="nFooter_Group_Content_Line"
+              v-for="(t, i) in translations"
+              :key="i"
+            >
+              <a
+                class="nFooter_Group_Content_Line_Link"
+                :href="t.path"
+                target="_blank"
+                rel="noopener"
+              >
                 {{ t.name }}
               </a>
             </li>
@@ -16,7 +25,12 @@
           <h4 class="nFooter_Group_Title">Ecosystem</h4>
           <ul class="nFooter_Group_Content">
             <li class="nFooter_Group_Content_Line">
-              <a class="nFooter_Group_Content_Line_Link" href="https://github.com/nuxt" target="_blank" rel="noopener">
+              <a
+                class="nFooter_Group_Content_Line_Link"
+                href="https://github.com/nuxt"
+                target="_blank"
+                rel="noopener"
+              >
                 GitHub
               </a>
             </li>
@@ -26,32 +40,62 @@
               </nuxt-link>
             </li>
             <li class="nFooter_Group_Content_Line">
-              <a class="nFooter_Group_Content_Line_Link" href="https://cmty.app/nuxt" target="_blank" rel="noopener">
+              <a
+                class="nFooter_Group_Content_Line_Link"
+                href="https://cmty.app/nuxt"
+                target="_blank"
+                rel="noopener"
+              >
                 Community
               </a>
             </li>
             <li class="nFooter_Group_Content_Line">
-              <a class="nFooter_Group_Content_Line_Link" href="https://twitter.com/nuxt_js" target="_blank" rel="noopener">
+              <a
+                class="nFooter_Group_Content_Line_Link"
+                href="https://twitter.com/nuxt_js"
+                target="_blank"
+                rel="noopener"
+              >
                 Twitter
               </a>
             </li>
             <li class="nFooter_Group_Content_Line">
-              <a class="nFooter_Group_Content_Line_Link" href="https://discordapp.com/invite/VApZF5W" target="_blank" rel="noopener">
+              <a
+                class="nFooter_Group_Content_Line_Link"
+                href="https://discordapp.com/invite/VApZF5W"
+                target="_blank"
+                rel="noopener"
+              >
                 Chat
               </a>
             </li>
             <li class="nFooter_Group_Content_Line">
-              <a class="nFooter_Group_Content_Line_Link" href="https://medium.com/@nuxt_js" target="_blank" rel="noopener">
+              <a
+                class="nFooter_Group_Content_Line_Link"
+                href="https://medium.com/@nuxt_js"
+                target="_blank"
+                rel="noopener"
+              >
                 Blog
               </a>
             </li>
             <li class="nFooter_Group_Content_Line">
-              <a class="nFooter_Group_Content_Line_Link" href="https://nuxt.threadless.com" target="_blank" rel="noopener">
+              <a
+                class="nFooter_Group_Content_Line_Link"
+                href="https://nuxt.threadless.com"
+                target="_blank"
+                rel="noopener"
+              >
                 The Nuxt Shop
               </a>
             </li>
             <li class="nFooter_Group_Content_Line">
-              <a class="nFooter_Group_Content_Line_Link" href="https://tidelift.com/subscription/pkg/npm-nuxt?utm_source=nuxt&amp;utm_medium=referral&amp;utm_campaign=homepage" target="_blank" rel="noopener">
+              <a
+                class="nFooter_Group_Content_Line_Link"
+                href="https://tidelift.com/subscription/pkg/npm-nuxt?utm_source=nuxt&amp;utm_medium=referral&amp;utm_campaign=homepage"
+                target="_blank"
+                rel="noopener"
+              >
                 Tidelift Support
               </a>
             </li>
@@ -67,17 +111,17 @@ export default {
   computed: {
     translations() {
       return [
-        { name: 'English', path: 'https://nuxtjs.org' + this.$route.path },
-        { name: 'Français', path: 'https://fr.nuxtjs.org' + this.$route.path },
-        { name: '简体中文', path: 'https://zh.nuxtjs.org' + this.$route.path },
-        { name: '日本語', path: 'https://ja.nuxtjs.org' + this.$route.path },
-        { name: '한국어', path: 'https://ko.nuxtjs.org' + this.$route.path },
-        { name: 'Русский', path: 'https://ru.nuxtjs.org' + this.$route.path },
-        { name: 'Indonesian', path: 'https://id.nuxtjs.org' + this.$route.path }
-      ]
+        { name: "English", path: "https://nuxtjs.org" + this.$route.path },
+        { name: "Français", path: "https://fr.nuxtjs.org" + this.$route.path },
+        { name: "简体中文", path: "https://zh.nuxtjs.org" + this.$route.path },
+        { name: "日本語", path: "https://ja.nuxtjs.org" + this.$route.path },
+        { name: "한국어", path: "https://ko.nuxtjs.org" + this.$route.path },
+        { name: "Русский", path: "https://ru.nuxtjs.org" + this.$route.path },
+        { name: "Indonesian", path: "https://id.nuxtjs.org" + this.$route.path }
+      ];
     }
   }
-}
+};
 </script>
 <style lang="scss" scoped>
 .nFooter {

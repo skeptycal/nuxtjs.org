@@ -1,35 +1,40 @@
 <template>
-  <nav class="Nav" :class="{'Nav--hidden': !visible}">
+  <nav class="Nav" :class="{ 'Nav--hidden': !visible }">
     <div class="Nav__Search">
-      <nuxt-header-nav-search/>
+      <nuxt-header-nav-search />
     </div>
     <div class="Nav__Menu">
-      <nuxt-header-nav-menu/>
+      <nuxt-header-nav-menu />
     </div>
     <div class="Nav__Lang">
-      <nuxt-header-nav-menu-dropdown :dropdownList="langList" :dropdownLabel="$store.state.lang.iso.toUpperCase()" />
+      <nuxt-header-nav-menu-dropdown
+        :dropdownList="langList"
+        :dropdownLabel="$store.state.lang.iso.toUpperCase()"
+      />
     </div>
   </nav>
 </template>
 
 <script>
-import NuxtHeaderNavSearch from '~/components/HeaderNavSearch.vue'
-import NuxtHeaderNavMenu from '~/components/HeaderNavMenu.vue'
-import NuxtHeaderNavMenuDropdown from '~/components/HeaderNavMenuDropdown.vue'
+import NuxtHeaderNavSearch from "~/components/HeaderNavSearch.vue";
+import NuxtHeaderNavMenu from "~/components/HeaderNavMenu.vue";
+import NuxtHeaderNavMenuDropdown from "~/components/HeaderNavMenuDropdown.vue";
 
 export default {
   computed: {
-    visible() { return this.$store.state.visibleHeader },
+    visible() {
+      return this.$store.state.visibleHeader;
+    },
     langList() {
       return [
-        { name: 'English', path: 'https://nuxtjs.org' + this.$route.path },
-        { name: 'Français', path: 'https://fr.nuxtjs.org' + this.$route.path },
-        { name: '简体中文', path: 'https://zh.nuxtjs.org' + this.$route.path },
-        { name: '日本語', path: 'https://ja.nuxtjs.org' + this.$route.path },
-        { name: '한국어', path: 'https://ko.nuxtjs.org' + this.$route.path },
-        { name: 'Русский', path: 'https://ru.nuxtjs.org' + this.$route.path },
-        { name: 'Indonesian', path: 'https://id.nuxtjs.org' + this.$route.path }
-      ]
+        { name: "English", path: "https://nuxtjs.org" + this.$route.path },
+        { name: "Français", path: "https://fr.nuxtjs.org" + this.$route.path },
+        { name: "简体中文", path: "https://zh.nuxtjs.org" + this.$route.path },
+        { name: "日本語", path: "https://ja.nuxtjs.org" + this.$route.path },
+        { name: "한국어", path: "https://ko.nuxtjs.org" + this.$route.path },
+        { name: "Русский", path: "https://ru.nuxtjs.org" + this.$route.path },
+        { name: "Indonesian", path: "https://id.nuxtjs.org" + this.$route.path }
+      ];
     }
   },
   components: {
@@ -37,7 +42,7 @@ export default {
     NuxtHeaderNavMenu,
     NuxtHeaderNavMenuDropdown
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>

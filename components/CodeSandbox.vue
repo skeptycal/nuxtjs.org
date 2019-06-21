@@ -1,12 +1,17 @@
 <template>
   <div class="codesandbox">
-    <iframe v-if="isIntersecting && src" :src="src" title="CodeSandbox editor" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"/>
+    <iframe
+      v-if="isIntersecting && src"
+      :src="src"
+      title="CodeSandbox editor"
+      sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"
+    />
     <span v-else>Loading Nuxt Sandbox...</span>
   </div>
 </template>
 
 <script>
-import intersectingMixin from '~/mixins/intersecting.js'
+import intersectingMixin from "~/mixins/intersecting.js";
 
 export default {
   mixins: [intersectingMixin],
@@ -16,7 +21,7 @@ export default {
       required: true
     }
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>

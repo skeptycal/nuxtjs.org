@@ -1,11 +1,25 @@
 <template>
   <div class="Dropdown">
-    <div class="Dropdown__Title" @click="show = !show" :class="{'Dropdown__Title--mobile': show}">
+    <div
+      class="Dropdown__Title"
+      @click="show = !show"
+      :class="{ 'Dropdown__Title--mobile': show }"
+    >
       {{ dropdownLabel }}
     </div>
     <ul class="Dropdown__List" :class="{ 'Dropdown__List--visible': show }">
-      <li class="Dropdown__List__Item" v-for="item in dropdownList" :key="item.name">
-        <a v-if="item.blank" class="Dropdown__List__Item__Link" :href="item.path" target="_blank" rel="noopener">
+      <li
+        class="Dropdown__List__Item"
+        v-for="item in dropdownList"
+        :key="item.name"
+      >
+        <a
+          v-if="item.blank"
+          class="Dropdown__List__Item__Link"
+          :href="item.path"
+          target="_blank"
+          rel="noopener"
+        >
           {{ item.name }}
         </a>
         <a v-else class="Dropdown__List__Item__Link" :href="item.path">
@@ -31,9 +45,9 @@ export default {
   data() {
     return {
       show: false
-    }
+    };
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>

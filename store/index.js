@@ -1,44 +1,44 @@
-import Vuex from 'vuex'
+import Vuex from "vuex";
 
 export const state = () => ({
   filled: false,
-  docVersion: '',
-  ghVersion: '',
+  docVersion: "",
+  ghVersion: "",
   visibleHeader: false,
   visibleAffix: false,
-  locale: 'en',
+  locale: "en",
   lang: {},
   menu: {},
   homepage: {},
   adBlocked: false
-})
+});
 
 export const mutations = {
   toggle(state, key) {
-    state[key] = !state[key]
+    state[key] = !state[key];
   },
   setDocVersion(state, docVersion) {
-    state.docVersion = docVersion
+    state.docVersion = docVersion;
   },
   setGhVersion(state, ghVersion) {
-    state.ghVersion = ghVersion
+    state.ghVersion = ghVersion;
   },
   setLocale(state, locale) {
-    state.locale = locale
+    state.locale = locale;
   },
   setLang(state, lang) {
-    state.lang = lang
+    state.lang = lang;
   },
   setMenu(state, menu) {
-    state.menu = menu
+    state.menu = menu;
   },
   setHomepage(state, homepage) {
-    state.homepage = homepage
+    state.homepage = homepage;
   },
   setFilled(state) {
-    state.filled = true
+    state.filled = true;
   },
   setAdBlocked(state, value) {
-    state.adBlocked = value
+    state.adBlocked = value;
   }
-}
+};

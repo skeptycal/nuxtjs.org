@@ -1,38 +1,46 @@
 <template>
   <header class="Header">
-    <nuxt-link class="Header__Logo" to="/" @click.right.native.prevent="showLogos">
-      <n-logo/>
+    <nuxt-link
+      class="Header__Logo"
+      to="/"
+      @click.right.native.prevent="showLogos"
+    >
+      <n-logo />
       <!-- <img src="~static/logo_nav.png" alt="Nuxt"/> -->
       <h1 class="Header__Logo__Text">NUXTJS</h1>
     </nuxt-link>
     <div class="Header__Toggler">
       <div class="Header__Toggler__Button" @click="toggle">
-        <div :class="{'icon menu': !visible, 'icon close': visible}"></div>
+        <div :class="{ 'icon menu': !visible, 'icon close': visible }"></div>
       </div>
     </div>
-    <nuxt-header-nav/>
+    <nuxt-header-nav />
   </header>
 </template>
 
 <script>
-import nLogo from '@/components/icons/nuxtjs'
-import NuxtHeaderNav from '@/components/HeaderNav'
+import nLogo from "@/components/icons/nuxtjs";
+import NuxtHeaderNav from "@/components/HeaderNav";
 
 export default {
   computed: {
-    visible() { return this.$store.state.visibleHeader }
+    visible() {
+      return this.$store.state.visibleHeader;
+    }
   },
   methods: {
-    toggle() { this.$store.commit('toggle', 'visibleHeader') },
+    toggle() {
+      this.$store.commit("toggle", "visibleHeader");
+    },
     showLogos() {
-      this.$router.push('/logos')
+      this.$router.push("/logos");
     }
   },
   components: {
     nLogo,
     NuxtHeaderNav
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>

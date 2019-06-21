@@ -5,15 +5,21 @@
 <script>
 export default {
   mounted() {
-    if (['en', 'fr'].indexOf(this.$store.state.locale) !== -1 && this.$refs.carbonads) {
-      const script = document.createElement('script')
-      script.setAttribute('type', 'text/javascript')
-      script.setAttribute('src', '//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=nuxtjsorg')
-      script.setAttribute('id', '_carbonads_js')
-      this.$refs.carbonads.appendChild(script)
+    if (
+      ["en", "fr"].indexOf(this.$store.state.locale) !== -1 &&
+      this.$refs.carbonads
+    ) {
+      const script = document.createElement("script");
+      script.setAttribute("type", "text/javascript");
+      script.setAttribute(
+        "src",
+        "//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=nuxtjsorg"
+      );
+      script.setAttribute("id", "_carbonads_js");
+      this.$refs.carbonads.appendChild(script);
     }
   }
-}
+};
 </script>
 
 <style lang="scss">
@@ -39,14 +45,13 @@ export default {
     display: block;
     width: 130px;
     height: 100px;
-    background-image: url('/vuejobs.png');
+    background-image: url("/vuejobs.png");
   }
   .carbon-img {
     display: inline-block;
     float: left;
     margin-right: 10px;
-    @media (min-width: 625px)
-    {
+    @media (min-width: 625px) {
       float: none;
       margin-right: 0;
     }
@@ -54,27 +59,22 @@ export default {
   .carbon-text {
     color: #34495e;
     text-decoration: none;
-    &:hover
-    {
+    &:hover {
       text-decoration: none;
     }
-    @media (min-width: 625px)
-    {
+    @media (min-width: 625px) {
       display: inline-block;
       margin-top: 5px;
     }
   }
-  .carbon-wrap
-  {
-    @media (min-width: 625px)
-    {
+  .carbon-wrap {
+    @media (min-width: 625px) {
       display: inline-block;
       margin-bottom: 5px;
       line-height: normal;
     }
   }
-  .carbon-poweredby
-  {
+  .carbon-poweredby {
     color: #7f8c8d;
     display: block;
   }

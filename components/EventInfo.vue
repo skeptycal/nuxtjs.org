@@ -1,27 +1,32 @@
 <template>
   <div class="EventInfo" :class="{ hidden, 'full-width': isHome }">
-    <a href="https://vuetoronto.com/tickets/?unii-discount-code=NUXTJS100" target="_blank" rel="noopener">{{ $store.state.lang.text.vue_toronto }}</a>
+    <a
+      href="https://vuetoronto.com/tickets/?unii-discount-code=NUXTJS100"
+      target="_blank"
+      rel="noopener"
+      >{{ $store.state.lang.text.vue_toronto }}</a
+    >
   </div>
 </template>
 
 <script>
-const dateUntil = new Date('2018-11-11')
+const dateUntil = new Date("2018-11-11");
 
 export default {
   data() {
-    return { hidden: true }
+    return { hidden: true };
   },
   computed: {
     isHome() {
-      return this.$route.path === '/'
+      return this.$route.path === "/";
     }
   },
   mounted() {
     if (Date.now() <= dateUntil) {
-      this.hidden = false
+      this.hidden = false;
     }
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>

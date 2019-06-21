@@ -5,8 +5,7 @@
  * Remove the margin in all browsers (opinionated).
  */
 
-body
-{
+body {
   margin: 0;
 }
 
@@ -14,8 +13,12 @@ body
  * Add the correct display in IE 9-.
  */
 
-article, aside, footer, header, nav, section
-{
+article,
+aside,
+footer,
+header,
+nav,
+section {
   display: block;
 }
 
@@ -24,44 +27,43 @@ article, aside, footer, header, nav, section
  * `article` contexts in Chrome, Firefox, and Safari.
  */
 
-h1, h2, h3, h4, h5, h6
-{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 300;
   margin: 30px 0;
 }
 
-h4, h5, h6
-{
+h4,
+h5,
+h6 {
   font-weight: 400;
   margin: 20px 0;
 }
 
-h1
-{
+h1 {
   font-size: 46px;
 }
 
-h2
-{
+h2 {
   font-size: 34px;
 }
 
-h3
-{
+h3 {
   font-size: 28px;
 }
 
-h4
-{
+h4 {
   font-size: 24px;
 }
 
-h5
-{
+h5 {
   font-size: 20px;
 }
 
-h6
-{
+h6 {
   font-size: 16px;
 }

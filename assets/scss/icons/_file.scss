@@ -1,13 +1,11 @@
-.file.icon
-{
+.file.icon {
   margin-left: 4px;
   margin-top: 0px;
   width: 11px;
   height: 15px;
-  border:  1px solid #333333;
+  border: 1px solid #333333;
   border-radius: 0 5px 0 0;
-  &:after
-  {
+  &:after {
     top: 0px;
     right: -1px;
     width: 4px;

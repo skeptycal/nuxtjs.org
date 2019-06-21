@@ -1,25 +1,22 @@
-.close.icon
-{
+.close.icon {
   color: #000;
   margin-top: 0;
   margin-left: 0;
   width: 21px;
   height: 21px;
-  &:before, &:after
-  {
+  &:before,
+  &:after {
     top: 10px;
     width: 21px;
     height: 1px;
     background-color: currentColor;
   }
-  &:before
-  {
+  &:before {
     -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg);
+    transform: rotate(-45deg);
   }
-  &:after
-  {
+  &:after {
     -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
+    transform: rotate(45deg);
   }
 }

@@ -1,45 +1,57 @@
 <template>
   <div class="Search">
-    <input class="Search__Input" type="text" name="search" id="algolia" :placeholder="$store.state.lang.text.search" />
+    <input
+      class="Search__Input"
+      type="text"
+      name="search"
+      id="algolia"
+      :placeholder="$store.state.lang.text.search"
+    />
   </div>
 </template>
 
 <script>
-let scriptInjected = false
-let callbacks = []
-let onScriptLoaded = (cb) => callbacks.push(cb)
-let scriptLoaded = () => callbacks.forEach((cb) => cb())
+let scriptInjected = false;
+let callbacks = [];
+let onScriptLoaded = cb => callbacks.push(cb);
+let scriptLoaded = () => callbacks.forEach(cb => cb());
 
 export default {
   mounted() {
-    onScriptLoaded(() => this.addInstantSearch())
-    if (scriptInjected) return
+    onScriptLoaded(() => this.addInstantSearch());
+    if (scriptInjected) return;
     // Load JS
-    const script = document.createElement('script')
-    script.setAttribute('type', 'text/javascript')
-    script.setAttribute('src', '//cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js')
-    document.getElementsByTagName('body')[0].appendChild(script)
-    script.onload = scriptLoaded
+    const script = document.createElement("script");
+    script.setAttribute("type", "text/javascript");
+    script.setAttribute(
+      "src",
+      "//cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"
+    );
+    document.getElementsByTagName("body")[0].appendChild(script);
+    script.onload = scriptLoaded;
     // Load CSS
-    var link = document.createElement('link')
-    link.setAttribute('rel', 'stylesheet')
-    link.setAttribute('type', 'text/css')
-    link.setAttribute('href', 'https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css')
-    document.getElementsByTagName('body')[0].appendChild(link)
-    scriptInjected = true
+    var link = document.createElement("link");
+    link.setAttribute("rel", "stylesheet");
+    link.setAttribute("type", "text/css");
+    link.setAttribute(
+      "href",
+      "https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css"
+    );
+    document.getElementsByTagName("body")[0].appendChild(link);
+    scriptInjected = true;
   },
   methods: {
     addInstantSearch() {
       window.docsearch({
         apiKey: process.env.docSearchApiKey,
-        indexName: 'nuxtjs',
-        inputSelector: '#algolia',
-        algoliaOptions: { 'facetFilters': [`tags:${this.$store.state.locale}`] },
+        indexName: "nuxtjs",
+        inputSelector: "#algolia",
+        algoliaOptions: { facetFilters: [`tags:${this.$store.state.locale}`] },
         debug: true // Set debug to true if you want to inspect the dropdown
-      })
+      });
     }
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>

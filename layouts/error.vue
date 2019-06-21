@@ -1,7 +1,11 @@
 <template>
   <div>
     <section class="Landscape">
-      <img src="~static/triangles.png" alt="Logo nuxt" class="Landscape__Image"/>
+      <img
+        src="~static/triangles.png"
+        alt="Logo nuxt"
+        class="Landscape__Image"
+      />
       <h1 class="Landscape__Title">
         {{ error.statusCode }}
       </h1>
@@ -10,7 +14,11 @@
       </h2>
       <ul class="Landscape__List">
         <li class="Landscape__List__Item">
-          <nuxt-link v-if="error.statusCode === 404" class="button button--green" to="/">
+          <nuxt-link
+            v-if="error.statusCode === 404"
+            class="button button--green"
+            to="/"
+          >
             {{ $store.state.lang.links.homepage }}
           </nuxt-link>
         </li>
@@ -21,19 +29,18 @@
 </template>
 
 <script>
-import NuxtFooter from '~/components/Footer.vue'
+import NuxtFooter from "~/components/Footer.vue";
 
 export default {
-  props: ['error'],
+  props: ["error"],
   components: {
     NuxtFooter
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>
-.Landscape
-{
+.Landscape {
   $footer-height: 50px;
 
   min-height: calc(100vh - #{$footer-height});
@@ -41,32 +48,25 @@ export default {
   padding: 50px 15px;
   padding-top: 120px;
   text-align: center;
-  @media (min-width: 991px)
-  {
+  @media (min-width: 991px) {
     padding: 100px 30px;
     padding-top: 180px;
   }
-  &__Image
-  {
-    &--mobile
-    {
+  &__Image {
+    &--mobile {
       display: inline-block;
-      @media (min-width: 991px)
-      {
+      @media (min-width: 991px) {
         display: none;
       }
     }
-    &--desktop
-    {
+    &--desktop {
       display: none;
-      @media (min-width: 991px)
-      {
+      @media (min-width: 991px) {
         display: inline-block;
       }
     }
   }
-  &__Title
-  {
+  &__Title {
     font-weight: 300;
     letter-spacing: 1px;
     margin: 20px 0;
@@ -74,25 +74,21 @@ export default {
     font-size: 128px;
     line-height: 100px;
   }
-  &__SubTitle
-  {
+  &__SubTitle {
     letter-spacing: 1px;
     line-height: normal;
     margin: 20px 0;
     color: #35495e;
   }
-  &__List
-  {
+  &__List {
     list-style: none;
     margin: 0;
     padding: 0;
-    &__Item
-    {
+    &__Item {
       display: inline-block;
       padding: 20px 15px;
       padding-bottom: 0;
-      .button
-      {
+      .button {
         font-size: 16px;
       }
     }

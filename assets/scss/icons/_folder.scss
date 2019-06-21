@@ -1,5 +1,4 @@
-.folder.icon
-{
+.folder.icon {
   margin-left: 2px;
   margin-top: 6px;
   width: 15px;
@@ -8,8 +7,7 @@
   border-right: solid 1px #333333;
   border-bottom: solid 1px #333333;
   border-radius: 0 1px 1px 1px;
-  &:before
-  {
+  &:before {
     left: -1px;
     top: -3px;
     width: 6px;
@@ -19,8 +17,7 @@
     border-top: solid 1px #333333;
     border-radius: 2px 3px 0 0;
   }
-  &:after
-  {
+  &:after {
     top: -1px;
     right: -1px;
     width: 9px;

@@ -1,22 +1,19 @@
-.remove.icon
-{
+.remove.icon {
   color: #000;
   margin-left: 3px;
   margin-top: 10px;
-  &:before, &:after
-  {
+  &:before,
+  &:after {
     width: 15px;
     height: 1px;
     background-color: currentColor;
   }
-  &:before
-  {
+  &:before {
     -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
+    transform: rotate(45deg);
   }
-  &:after
-  {
+  &:after {
     -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg);
+    transform: rotate(-45deg);
   }
 }

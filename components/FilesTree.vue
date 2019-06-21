@@ -1,6 +1,6 @@
 <template>
   <div class="FilesTree clearfix">
-    <div class="FilesTree__Left" :class="{'FilesTree__Left--hidden': hidden}">
+    <div class="FilesTree__Left" :class="{ 'FilesTree__Left--hidden': hidden }">
       <div class="FilesTree__Left__Header">
         <div class="Icon" @click="hidden = true">
           <div class="icon remove"></div>
@@ -8,10 +8,17 @@
         {{ $store.state.lang.text.example_file }}
       </div>
       <div class="FilesTree__Left__Body">
-        <recursive-list v-on:changeFile="changeFile" :path="'examples/'+example"></recursive-list>
+        <recursive-list
+          v-on:changeFile="changeFile"
+          :path="'examples/' + example"
+        ></recursive-list>
       </div>
     </div>
-    <div class="FilesTree__Right" :class="{'FilesTree__Right--hidden': hidden}" v-if="currentFile">
+    <div
+      class="FilesTree__Right"
+      :class="{ 'FilesTree__Right--hidden': hidden }"
+      v-if="currentFile"
+    >
       <div class="FilesTree__Right__Header">
         <div class="Icon" @click="hidden = false" v-if="hidden">
           <div class="icon menu"></div>
@@ -20,21 +27,31 @@
       </div>
       <div class="FilesTree__Right__Body">
         <template v-if="parseContent">
-          <img v-if="isImage" :src="parseContent" alt="Image" class="FilesTree__Right__Body__Image" />
-          <pre v-else class="FilesTree__Right__Body__File"><code v-html="parseContent"></code></pre>
+          <img
+            v-if="isImage"
+            :src="parseContent"
+            alt="Image"
+            class="FilesTree__Right__Body__Image"
+          />
+          <pre
+            v-else
+            class="FilesTree__Right__Body__File"
+          ><code v-html="parseContent"></code></pre>
         </template>
-        <div v-else class="FilesTree__Right__Body__Wait">{{ $store.state.lang.text.please_wait }}</div>
+        <div v-else class="FilesTree__Right__Body__Wait">
+          {{ $store.state.lang.text.please_wait }}
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import hljs from 'highlight.js'
+import hljs from "highlight.js";
 
-import RecursiveList from './RecursiveList.vue'
+import RecursiveList from "./RecursiveList.vue";
 
-let cacheFiles = {}
+let cacheFiles = {};
 
 export default {
   props: {
@@ -47,60 +64,68 @@ export default {
     return {
       hidden: false,
       currentFile: null,
-      content: ''
-    }
+      content: ""
+    };
   },
   computed: {
     parseContent() {
       if (!this.content) {
-        return ''
+        return "";
       }
       if (this.isImage) {
-        return 'https://github.com/nuxt/nuxt.js/blob/master/' + this.currentFile.path + '?raw=true'
+        return (
+          "https://github.com/nuxt/nuxt.js/blob/master/" +
+          this.currentFile.path +
+          "?raw=true"
+        );
       }
-      return this.content
+      return this.content;
     },
     breadcrumb() {
-      return this.currentFile.path.replace('examples/' + this.example, '')
+      return this.currentFile.path.replace("examples/" + this.example, "");
     },
     isImage() {
-      if (this.currentFile && /[^\s]+\.(jpe?g|png|gif|bmp)$/i.test(this.currentFile.path)) {
-        return true
+      if (
+        this.currentFile &&
+        /[^\s]+\.(jpe?g|png|gif|bmp)$/i.test(this.currentFile.path)
+      ) {
+        return true;
       }
-      return false
+      return false;
     },
     isMobile() {
-      return window.innerWidth < 576
+      return window.innerWidth < 576;
     }
   },
   methods: {
     changeFile(file) {
-      this.currentFile = file
-      this.content = cacheFiles[file.path]
+      this.currentFile = file;
+      this.content = cacheFiles[file.path];
       if (this.isMobile) {
-        this.hidden = true
+        this.hidden = true;
       }
       if (!this.content) {
         fetch({
-          url: 'https://api.github.com/repos/nuxt/nuxt.js/contents/' + file.path,
+          url:
+            "https://api.github.com/repos/nuxt/nuxt.js/contents/" + file.path,
           headers: {
-            'Authorization': `token ${process.env.githubToken}`
+            Authorization: `token ${process.env.githubToken}`
           }
         })
-          .then((res) => res.json())
-          .then((data) => {
-            let content = window.atob(data.content)
-            content = hljs.highlightAuto(content).value
-            cacheFiles[file.path] = content
-            this.content = cacheFiles[file.path]
-          })
+          .then(res => res.json())
+          .then(data => {
+            let content = window.atob(data.content);
+            content = hljs.highlightAuto(content).value;
+            cacheFiles[file.path] = content;
+            this.content = cacheFiles[file.path];
+          });
       }
     }
   },
   components: {
     RecursiveList
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>

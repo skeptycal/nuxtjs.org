@@ -7,29 +7,30 @@
 <script>
 export default {
   mounted() {
-    if (this.$store.state.locale === 'en' && this.$refs.carbonadsText) {
-      this.loadScript()
+    if (this.$store.state.locale === "en" && this.$refs.carbonadsText) {
+      this.loadScript();
     }
   },
   methods: {
     loadScript() {
       // Order is important (https://stackoverflow.com/questions/16230886/trying-to-fire-the-onload-event-on-script-tag)
-      const script = document.createElement('script')
-      script.setAttribute('type', 'text/javascript')
-      this.$refs.carbonadsText.appendChild(script)
-      script.onload = this.scriptLoaded
-      script.setAttribute('src', '//m.servedby-buysellads.com/monetization.js')
+      const script = document.createElement("script");
+      script.setAttribute("type", "text/javascript");
+      this.$refs.carbonadsText.appendChild(script);
+      script.onload = this.scriptLoaded;
+      script.setAttribute("src", "//m.servedby-buysellads.com/monetization.js");
     },
     scriptLoaded() {
-      if (typeof _bsa === 'undefined') return console.warn('Could not load Carbon Ads Text') // eslint-disable-line no-console
-      window._bsa.init('default', 'CKYD62QW', 'placement:nuxtjsorg', {
-        target: '.bsa-cpc',
-        align: 'horizontal',
-        disable_css: 'true'
-      })
+      if (typeof _bsa === "undefined")
+        return console.warn("Could not load Carbon Ads Text"); // eslint-disable-line no-console
+      window._bsa.init("default", "CKYD62QW", "placement:nuxtjsorg", {
+        target: ".bsa-cpc",
+        align: "horizontal",
+        disable_css: "true"
+      });
     }
   }
-}
+};
 </script>
 
 <style>

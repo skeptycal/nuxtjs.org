@@ -1,19 +1,24 @@
 <template>
   <div class="contribute">
-    <carbon-ads-text/>
-    <p>{{ $store.state.lang.guide.contribute }} <a :href="docLink" target="_blank" rel="noopener">{{ $store.state.lang.guide.edit_on_github }}</a></p>
+    <carbon-ads-text />
+    <p>
+      {{ $store.state.lang.guide.contribute }}
+      <a :href="docLink" target="_blank" rel="noopener">{{
+        $store.state.lang.guide.edit_on_github
+      }}</a>
+    </p>
   </div>
 </template>
 
 <script>
-import CarbonAdsText from '~/components/CarbonAdsText'
+import CarbonAdsText from "~/components/CarbonAdsText";
 
 export default {
-  props: ['docLink'],
+  props: ["docLink"],
   components: {
     CarbonAdsText
   }
-}
+};
 </script>
 
 <style scoped>

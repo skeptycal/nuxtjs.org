@@ -21,14 +21,16 @@
       </nuxt-link>
     </li>
     <li class="Menu__Item">
-      <nuxt-header-nav-menu-dropdown :dropdownList="dropdownList" :dropdownLabel="$store.state.lang.links.ecosystem" />
+      <nuxt-header-nav-menu-dropdown
+        :dropdownList="dropdownList"
+        :dropdownLabel="$store.state.lang.links.ecosystem"
+      />
     </li>
   </ul>
-  </nav>
 </template>
 
 <script>
-import NuxtHeaderNavMenuDropdown from '~/components/HeaderNavMenuDropdown.vue'
+import NuxtHeaderNavMenuDropdown from "~/components/HeaderNavMenuDropdown.vue";
 
 export default {
   components: {
@@ -39,33 +41,33 @@ export default {
       dropdownList: [
         {
           name: this.$store.state.lang.links.github,
-          path: 'https://github.com/nuxt',
+          path: "https://github.com/nuxt",
           blank: true
         },
         {
           name: this.$store.state.lang.links.twitter,
-          path: 'https://twitter.com/nuxt_js',
+          path: "https://twitter.com/nuxt_js",
           blank: true
         },
         {
           name: this.$store.state.lang.links.chat,
-          path: 'https://discord.nuxtjs.org',
+          path: "https://discord.nuxtjs.org",
           blank: true
         },
         {
           name: this.$store.state.lang.links.vuejs,
-          path: 'https://vuejs.org',
+          path: "https://vuejs.org",
           blank: true
         },
         {
           name: this.$store.state.lang.links.vue_jobs,
-          path: 'https://vuejobs.com/?ref=nuxtjs',
+          path: "https://vuejobs.com/?ref=nuxtjs",
           blank: true
         }
       ]
-    }
+    };
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>
