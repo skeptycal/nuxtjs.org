@@ -1,5 +1,7 @@
 # nuxtjs.org
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/skeptycal/nuxtjs.org.svg)](https://greenkeeper.io/)
+
 Universal Vue.js Application built with [Nuxt.js](https://github.com/nuxt/nuxt.js).
 
 # Setup
